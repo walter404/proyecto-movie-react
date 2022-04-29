@@ -5,6 +5,7 @@ import './App.css';
 //importamos los componentes creados
 import Productos from './componentes/productos';
 import Contacto from './componentes/contacto';
+import FromContainer from './componentes/FromContainer';
 
 import NavBarMovies from './componentes/layauts/navBar';
 import Menu from './componentes/menu';
@@ -23,7 +24,12 @@ function App() {
                 </Route>
             </Routes>
             </BrowserRouter>
+            
+                    <FromContainer greeting='Hola soy itemListContainer' />
+            
         </div>
+        
+        
     );
 }
 

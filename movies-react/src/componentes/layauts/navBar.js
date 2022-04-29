@@ -2,6 +2,7 @@ import React from "react";
 import { Fragment } from "react";
 
 
+
 import {Navbar, Nav, Container} from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 import imagen from "./movi.jpg";
