@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import {Navbar, Nav, Container} from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 import imagen from "./movi.jpg";
+import carrito from "./carrito-de-compras.png";
 
 const NavBarMovies = () => {
     return(
@@ -20,6 +21,7 @@ const NavBarMovies = () => {
                        <Nav.Link as={Link} to="/Contacto">Contacto</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
+                <img className="carrito" src={ carrito } alt="carrito" />
         </Container>
     </Navbar>
         
