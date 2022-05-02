@@ -3,12 +3,13 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 //importamos los componentes creados
-import Productos from './componentes/productos';
-import Contacto from './componentes/contacto';
-import FromContainer from './componentes/FromContainer';
+import Productos from './componentes/Productos';
+import Contacto from './componentes/Contacto';
 
-import NavBarMovies from './componentes/layauts/navBar';
-import Menu from './componentes/menu';
+
+import NavBarMovies from './componentes/layauts/NavBar';
+import Menu from './componentes/Menu';
+import ItemListContainer from './componentes/ItemListContainer';
 
 function App() {
     return (
@@ -25,7 +26,7 @@ function App() {
             </Routes>
             </BrowserRouter>
             
-                    <FromContainer greeting='Hola soy itemListContainer' />
+                    <ItemListContainer greeting='Hola soy itemListContainer' />
             
         </div>
         
