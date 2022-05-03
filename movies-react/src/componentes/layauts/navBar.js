@@ -8,7 +8,7 @@ import { Outlet, Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import imagen from "./movi.jpg";
 
-// import carrito from "./carrito-de-compras.png";
+
 
 const NavBarMovies = () => {
     return(
@@ -25,7 +25,7 @@ const NavBarMovies = () => {
                     </Nav>
                 </Navbar.Collapse>
                 
-                {/* <img className="carrito" src={ carrito } alt="carrito" /> */}
+                
         </Container>
         <CartWidget/>
     </Navbar>
