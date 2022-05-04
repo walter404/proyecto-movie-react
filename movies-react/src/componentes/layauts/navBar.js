@@ -6,6 +6,7 @@ import { Fragment } from "react";
 import {Navbar, Nav, Container} from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
+import ItemCount from "../ItemCount/ItemCount";
 import imagen from "./movi.jpg";
 
 
@@ -32,6 +33,7 @@ const NavBarMovies = () => {
         
         <section>
             <Outlet></Outlet>
+            <ItemCount/>
         </section>
 
 </>
