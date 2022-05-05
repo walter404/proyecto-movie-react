@@ -4,7 +4,7 @@ import { Fragment } from "react";
 
 
 import {Navbar, Nav, Container} from "react-bootstrap";
-import { Outlet, Link } from "react-router-dom";
+import {Outlet, Link} from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import ItemCount from "../ItemCount/ItemCount";
 import imagen from "./movi.jpg";
@@ -15,7 +15,7 @@ const NavBarMovies = () => {
     return(
 <>
     <Navbar className="navBg" variant="dark" expand="lg">
-          <Container>
+        <Container>
             <Navbar.Brand as={Link} to="/" > <img className="logo" src={imagen} alt="Logo"/> </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -27,14 +27,15 @@ const NavBarMovies = () => {
                 </Navbar.Collapse>
                 
                 
-        </Container>
+        </Container>      
         <CartWidget/>
     </Navbar>
-        
+       
         <section>
-            <Outlet></Outlet>
-            <ItemCount/>
+            <Outlet></Outlet> 
+            <ItemCount onAdd={(cont)=>console.log(`${cont} unidades agregada del carrito`)}/>                   
         </section>
+        
 
 </>
     )

@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes, } from 'react-router-dom';
 import './App.css';
 
 //importamos los componentes creados
 import Productos from './componentes/Productos';
 import Contacto from './componentes/Contacto';
-
+// import ItemCount from './componentes/ItemCount/ItemCount';
 
 import NavBarMovies from './componentes/layauts/NavBar';
 import Menu from './componentes/Menu';
@@ -26,7 +26,8 @@ function App() {
             </Routes>
             </BrowserRouter>
             
-                    <ItemListContainer greeting='Hola soy itemListContainer' />
+           <ItemListContainer greeting='Hola soy itemListContainer' />
+           
                  
         </div>
         
