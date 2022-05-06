@@ -33,7 +33,7 @@ const NavBarMovies = () => {
        
         <section>
             <Outlet></Outlet> 
-            <ItemCount onAdd={(cont)=>console.log(`${cont} unidades agregada del carrito`)}/>                   
+            <ItemCount stock="10" onAdd={(cont)=>console.log(`${cont} unidades agregada del carrito`)}/>                   
         </section>
         
 

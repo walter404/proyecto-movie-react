@@ -3,9 +3,9 @@ import './ItemCount.css';
 import { FaBookmark } from "react-icons/fa";
 import {Card, Button, } from 'react-bootstrap'
 
-const ItemCount  = ({onAdd}) => {
+const ItemCount  = ({onAdd, stock}) => {
     const [cont, setCont] = useState(1)
-    const stock = 10
+    // const stock = 10
     function crementar(){
         if (cont < stock){
         setCont(cont + 1)}
