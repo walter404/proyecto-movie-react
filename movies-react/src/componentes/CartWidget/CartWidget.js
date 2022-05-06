@@ -1,11 +1,13 @@
-import Img from '../img/carrito-de-compras.png'
+import { FaCartArrowDown } from 'react-icons/fa' 
 
 
 
 const CartWidget = () => {
   return (
     <>
-      <img className="carrito" src={ Img } alt="imagen" />
+
+    <FaCartArrowDown className='carrito'/>
+    {/* <img className='carrito' alt="imagen" /> */}
     </>
   )
 }
