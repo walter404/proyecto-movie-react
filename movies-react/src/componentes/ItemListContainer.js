@@ -2,7 +2,9 @@ function ItemListContainer( {greeting} ) {
     
     return(
         <>
-          <h1>{ greeting }</h1>
+          <p>{ greeting }</p>
+          
+        
         </>
     )
 }

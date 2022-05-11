@@ -2,11 +2,11 @@ import React from "react";
 import { Fragment } from "react";
 
 
-
+//Outlet
 import {Navbar, Nav, Container} from "react-bootstrap";
-import {Outlet, Link} from "react-router-dom";
+import {Outlet,Link} from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
-import ItemCount from "../ItemCount/ItemCount";
+
 import imagen from "./movi.jpg";
 
 
@@ -30,11 +30,10 @@ const NavBarMovies = () => {
         </Container>      
         <CartWidget/>
     </Navbar>
-       
-        <section>
+    <section>
             <Outlet></Outlet> 
-            <ItemCount stock="10" onAdd={(cont)=>console.log(`${cont} unidades agregada del carrito`)}/>                   
-        </section>
+                                           
+    </section>
         
 
 </>

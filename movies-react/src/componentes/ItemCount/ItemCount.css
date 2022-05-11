@@ -1,3 +1,7 @@
+.Item-Count{
+    display: flex;
+    flex-wrap: wrap;
+}
 .card{
     padding: 30px;
 }
