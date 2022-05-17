@@ -1,7 +1,6 @@
 import  { useState } from 'react'
 import './ItemCount.css';
-import { FaBookmark } from "react-icons/fa";
-import {Card, Button, } from 'react-bootstrap'
+
 
 
 
@@ -27,19 +26,19 @@ const ItemCount  = ({onAdd, stock}) => {
     function addToCart () {
         onAdd(cont)
     }
+    
+    
+
 
   return (
-    <div className='Item-Count'>
-      
+    <div>
             
-            <Card.Body className='card'>
-                <Card.Text>Cantidad: {cont}</Card.Text>
-                <Button className='boton-cre' variant="primary" onClick={crementar} >+</Button>
-                <Button className='boton-decre' variant="danger" onClick={decrementar}>-</Button>
-                <button className='guardado' onClick={addToCart} ><FaBookmark/></button>
-            </Card.Body>
-        
-    </div>
+            <button onClick={crementar} className="btn btn-primary">+</button>
+            { cont }
+            <button onClick={decrementar} className="btn btn-primary">-</button><br/>
+            <button onClick={addToCart} className="btn btn-primary">Agregar al carrito</button>
+        </div>
+
   )
 }
 

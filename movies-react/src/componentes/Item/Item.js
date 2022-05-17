@@ -1,19 +1,29 @@
-import ItemCount from '../ItemCount/ItemCount'
-import { Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import '../../componentes/Item/Item.css'
 
-const Item = ({ name, price, img}) => {
+
+const Item = ({prod}) => {
+
   return (
     
-      <Card className='Card-Item ' style={{ width: '18rem' }}>
-      <img className="item-img" src={img} alt="" />
-            <div>
-                <h3>{name}</h3>
-                <p>{`Precio: $${price}`}</p>
-                <ItemCount stock="10" onAdd={(cont)=>console.log(`${cont} unidades agregada del carrito`)}/>
-            </div>
-      </Card>
-    
+    <div className='col-md-4'>                        
+<Link to={`/detalle/${prod.id}`}>
+    <div className="card w-100 mt-5" >
+        <div className="card-header">
+            {`${prod.name} - ${prod.categoria}`}
+        </div>
+        <div className="card-body">
+            <img src={prod.foto} alt='ima' className='w-50' />
+            {prod.price}                                                            
+        </div>
+        <div className="card-footer">  
+            <button className="btn btn-outline-primary btn-block">
+                detalle del producto
+            </button>                
+        </div>
+    </div>
+</Link> 
+   </div> 
   )
 }
 

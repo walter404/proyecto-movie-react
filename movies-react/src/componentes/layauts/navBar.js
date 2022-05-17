@@ -7,6 +7,7 @@ import {Navbar, Nav, Container} from "react-bootstrap";
 import {Outlet,Link} from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
+
 import imagen from "./movi.jpg";
 
 
@@ -23,6 +24,7 @@ const NavBarMovies = () => {
                        <Nav.Link as={Link} to="/" >Menu</Nav.Link>
                        <Nav.Link as={Link} to="/Productos">Productos</Nav.Link>
                        <Nav.Link as={Link} to="/Contacto">Contacto</Nav.Link>
+
                     </Nav>
                 </Navbar.Collapse>
                 
@@ -30,10 +32,11 @@ const NavBarMovies = () => {
         </Container>      
         <CartWidget/>
     </Navbar>
-    <section>
-            <Outlet></Outlet> 
-                                           
-    </section>
+    <div className="div">
+            <Outlet></Outlet>
+            
+                                                     
+    </div>
         
 
 </>
