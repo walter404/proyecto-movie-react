@@ -1,13 +1,12 @@
 import { FaCartArrowDown } from 'react-icons/fa' 
-
-
-
+import {Link} from 'react-router-dom'
+import '../CartWidget/Cart.css'
 const CartWidget = () => {
   return (
     <>
-
-    <FaCartArrowDown className='carrito'/>
-    {/* <img className='carrito' alt="imagen" /> */}
+      <Link to='/cart'>
+          <FaCartArrowDown className='carrito' />
+      </Link>
     </>
   )
 }

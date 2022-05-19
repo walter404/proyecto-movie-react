@@ -1,3 +1,5 @@
+Este es un proyecto orientados en compra y rentas de peliculas, me parecio muy interense la idea ya que en la actualidad nos entretenemos mirando nuestra mejor series y peliculas. Bueno sobre como lo trabaje fue utilizar react-router-dom para simplificar la navegacion de la pagina, tambien utilice hooks para simplificar la navegacion de la misma. Mi idea es que sea intuitiva, que no sea compleja a la hora de navegar en ella y que sea entretenida.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -11,14 +11,12 @@ const ItemCount  = ({onAdd, stock}) => {
         if (cont < stock){
         setCont(cont + 1)}
         else{
-            
             alert('Producto en stock limitado')
         } 
     }
 
     function decrementar(){
-        if(cont> 1){
-        setCont(cont - 1)}
+        if(cont> 1){setCont(cont - 1)}
         else{
         alert('Por favor agrege un producto para poder eliminar')}
     }
@@ -31,7 +29,7 @@ const ItemCount  = ({onAdd, stock}) => {
 
 
   return (
-    <div>
+        <div>
             
             <button onClick={crementar} className="btn btn-primary">+</button>
             { cont }

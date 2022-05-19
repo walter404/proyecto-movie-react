@@ -2,11 +2,12 @@ import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom'
 
 
+
 import ItemList from "../componentes/ItemList/ItemList.js"
 import { getFetch } from "../helpers/getFetch.js"
 
 
-const ItemListContainer = ( { saludo='saludo' } ) => {      
+const ItemListContainer = ( { saludo='Lo mas nuevo' } ) => {      
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -14,7 +15,7 @@ const ItemListContainer = ( { saludo='saludo' } ) => {
 
     useEffect(() => {
         if (id) {
-            getFetch(id)  // fetch llamada a una api  
+            getFetch()  // fetch llamada a una api  
             .then(respuesta=> setProductos(respuesta.filter((prods) => prods.categoria === id)))
             .catch((err)=> console.log(err))
             .finally(()=>setLoading(false))                             
@@ -28,7 +29,7 @@ const ItemListContainer = ( { saludo='saludo' } ) => {
 
     
     
-    console.log(productos)
+
 
     
     return (
@@ -38,9 +39,11 @@ const ItemListContainer = ( { saludo='saludo' } ) => {
             { loading ? 
                 <h2>Cargando...</h2> 
                 : 
-                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
-                    <ItemList productos={productos} /> 
-                    
+
+                
+                <div style={{paddingTop: 25, display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
+                     
+                    <ItemList productos={productos} />
                 </div>
             }
         </div>

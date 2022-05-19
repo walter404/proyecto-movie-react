@@ -4,7 +4,7 @@ import { Fragment } from "react";
 
 //Outlet
 import {Navbar, Nav, Container} from "react-bootstrap";
-import {Outlet,Link} from "react-router-dom";
+import {Outlet,Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
 
@@ -12,7 +12,9 @@ import imagen from "./movi.jpg";
 
 
 
-const NavBarMovies = () => {
+
+const NavBar = () => {
+    
     return(
 <>
     <Navbar className="navBg" variant="dark" expand="lg">
@@ -21,10 +23,9 @@ const NavBarMovies = () => {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                    <Nav className="me-auto">
-                       <Nav.Link as={Link} to="/" >Menu</Nav.Link>
-                       <Nav.Link as={Link} to="/Productos">Productos</Nav.Link>
-                       <Nav.Link as={Link} to="/Contacto">Contacto</Nav.Link>
-
+                        <Nav.Link as={Link} to="/" >Menu</Nav.Link>                    
+                        <Nav.Link as={Link} to='/categoria/nuevo'>nuevo</Nav.Link>
+                        <Nav.Link as={Link} to='/categoria/accion'>accion</Nav.Link> 
                     </Nav>
                 </Navbar.Collapse>
                 
@@ -32,14 +33,14 @@ const NavBarMovies = () => {
         </Container>      
         <CartWidget/>
     </Navbar>
-    <div className="div">
+    <section className="section">
             <Outlet></Outlet>
             
                                                      
-    </div>
+    </section>
         
 
 </>
     )
 }
-export default NavBarMovies;
+export default NavBar;
