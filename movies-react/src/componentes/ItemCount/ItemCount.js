@@ -4,7 +4,7 @@ import './ItemCount.css';
 
 
 
-const ItemCount  = ({onAdd, stock}) => {
+const ItemCount  = ({onAdd, stock, handleInputType}) => {
     const [cont, setCont] = useState(1)
     
     function crementar(){
@@ -22,21 +22,26 @@ const ItemCount  = ({onAdd, stock}) => {
     }
     
     function addToCart () {
-        onAdd(cont)
+        onAdd(cont);
+        handleInputType();
     }
     
     
 
 
   return (
-        <div>
+    <>
+        <div className='Item-Count'>
             
             <button onClick={crementar} className="btn btn-primary">+</button>
             { cont }
             <button onClick={decrementar} className="btn btn-primary">-</button><br/>
-            <button onClick={addToCart} className="btn btn-primary">Agregar al carrito</button>
-        </div>
-
+            </div>
+            <div className='Cart'>
+                <button onClick={addToCart} className="btn btn-primary">Agregar al carrito</button>
+            </div>
+        
+    </>
   )
 }
 

@@ -6,8 +6,8 @@ import '../../componentes/Item/Item.css'
 const Item = ({prod}) => {
 
   return (
-<div className='Content'>
-    <Card className='card' style={{ width: '30rem' }}>                        
+
+    <Card className='card' style={{ width: '30rem', background: '#ffb6b9b0' }}>                        
 
                 <Card.Body>                        
                         <div className="card-header">
@@ -28,7 +28,7 @@ const Item = ({prod}) => {
                 </Card.Body>
             
    </Card> 
-</div>  
+
   )
 }
 

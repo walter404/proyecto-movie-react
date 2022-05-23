@@ -1,7 +1,9 @@
 .Item-Count{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 90px;
 }
-.card{
-    padding: 30px;
+.Cart{
+    margin-top: 40px;
 }

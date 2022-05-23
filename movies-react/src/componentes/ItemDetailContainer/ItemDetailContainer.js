@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../../componentes/ItemDetail/ItemDetail.js'
 import { getFetch } from '../../helpers/getFetch'
+import Loading from '../Loading/Loading.js'
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({})
@@ -22,7 +23,7 @@ const ItemDetailContainer = () => {
         <div>
 
 { loading ? 
-                <h2>Cargando...</h2> 
+                <Loading/>
                 : 
                 <div>
                      
