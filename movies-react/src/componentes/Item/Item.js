@@ -17,7 +17,7 @@ const Item = ({prod}) => {
                             <img src={prod.foto} alt='ima' className='w-50' />
                                                                                         
                         </div>
-                        <Card.Text>precio:{prod.price}</Card.Text>
+                        <Card.Text>precio: {prod.price}</Card.Text>
                     <Link to={`/detalle/${prod.id}`}>
                         <div className="card-footer">  
                             <button className="btn btn-outline-primary btn-block">

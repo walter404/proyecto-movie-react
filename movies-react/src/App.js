@@ -8,7 +8,7 @@ import NavBarMovies from './componentes/layauts/NavBar';
 
 
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
-import ItemListContainer from './componentes/ItemListContainer';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import Cart from './cart/Cart';
 
 

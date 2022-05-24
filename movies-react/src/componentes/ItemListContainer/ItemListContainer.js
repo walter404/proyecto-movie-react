@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom'
 
 
 
-import ItemList from "../componentes/ItemList/ItemList.js"
-import { getFetch } from "../helpers/getFetch.js"
-import Loading from "./Loading/Loading.js"
+import ItemList from "../ItemList/ItemList.js"
+import { getFetch } from "../../helpers/getFetch.js"
+import Loading from "../Loading/Loading.js"
 
 
 const ItemListContainer = ( { saludo='Lo mas nuevo' } ) => {      
@@ -39,11 +39,8 @@ const ItemListContainer = ( { saludo='Lo mas nuevo' } ) => {
             
             { loading ? 
                 <Loading/>
-                // <h2>Cargando...</h2> 
                 : 
-
-                
-                <div style={{padding: 25,  display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems:'center'}}>
+                 <div style={{padding: 25,  display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems:'center'}}>
                      
                     <ItemList productos={productos} />
                 </div>
