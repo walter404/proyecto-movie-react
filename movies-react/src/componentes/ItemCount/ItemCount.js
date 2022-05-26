@@ -4,8 +4,8 @@ import './ItemCount.css';
 
 
 
-const ItemCount  = ({onAdd, stock, handleInputType}) => {
-    const [cont, setCont] = useState(1)
+const ItemCount  = ({onAdd,initial, stock}) => {
+    const [cont, setCont] = useState(initial)
     
     function crementar(){
         if (cont < stock){
@@ -21,13 +21,13 @@ const ItemCount  = ({onAdd, stock, handleInputType}) => {
         alert('Por favor agrege un producto para poder eliminar')}
     }
     
-    function addToCart () {
-        onAdd(cont);
-        handleInputType();
-    }
+    // function addToCart () {
+    //     onAdd(cont,producto.name);
+    //     handleInputType();
+    // }
     
     
-
+//onClick={()=>{addToCart(producto,cont)}
 
   return (
     <>
@@ -38,7 +38,7 @@ const ItemCount  = ({onAdd, stock, handleInputType}) => {
             <button onClick={decrementar} className="btn btn-primary">-</button><br/>
             </div>
             <div className='Cart'>
-                <button onClick={addToCart} className="btn btn-primary">Agregar al carrito</button>
+                <button onClick={()=> onAdd(cont)} className="btn btn-primary">Agregar al carrito</button>
             </div>
         
     </>

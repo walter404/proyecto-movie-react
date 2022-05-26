@@ -10,12 +10,15 @@ import NavBarMovies from './componentes/layauts/NavBar';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import Cart from './cart/Cart';
+import CartProvider from './contex/CartContext';
 
 
 function App() {
     return (
         <div>
+            
             <BrowserRouter>
+            <CartProvider>
             <Routes>
                 <Route path='/' element={ <NavBarMovies /> }>
                 
@@ -26,12 +29,11 @@ function App() {
                 <Route path='*' element={ <Navigate replace to="/" /> } />
                 </Route>
             </Routes>
+            </CartProvider>
             </BrowserRouter>
-
             
            
-           
-                 
+                          
         </div>
         
         

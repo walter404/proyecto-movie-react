@@ -1,17 +1,25 @@
-import { useState } from 'react';
+import {  useState } from 'react';
+import { useCartContext } from '../../contex/CartContext';
 import Intercambiabilidad from '../Intercambiabilidad/Intercambiabilidad'
 import ItemCount from '../ItemCount/ItemCount'
 import '../ItemDetail/ItemDetail.css'
+
 const ItemDetail = ({producto}) => {
 
   const [inputType, setInputType] = useState('itemCount');
+  const {addToCart, cartList} = useCartContext()
 
-    function onAdd(cant) {
-        console.log(cant)
-    }
-    function handleInputType() {
-      setInputType('buyButtons');
+  const onAdd = (cant) => {
+    console.log(cant)
+    addToCart({...producto, cantidad: cant})
+    setInputType('buyButtons');
   }
+
+  console.log(cartList)
+   
+  //   function handleInputType() {
+  //     
+  // }
 
     return (
       <div className="row" style={{marginLeft:0, marginRight:0}} >
@@ -26,7 +34,7 @@ const ItemDetail = ({producto}) => {
                 <h3>$ {producto.price}</h3>
                 
                 {inputType === 'itemCount' ?
-          <ItemCount initial={1} stock={5} onAdd={onAdd} handleInputType={handleInputType}/>:
+          <ItemCount producto={producto} initial={1} stock={5} onAdd={onAdd} />:
           <Intercambiabilidad/>}
           
         </div>
