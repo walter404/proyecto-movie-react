@@ -1,0 +1,29 @@
+.cart-prod{
+    height: 100%;
+    /* background-color: #ffb6b9b0; */
+}
+.cart-item{
+    margin-bottom:20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.cart-item .button{
+    margin-bottom: 370px;
+}
+.cart-name{
+    font-family: monospace;
+}
+.cart-price{
+    font-size: 20px;
+    font-family: monospace;
+}
+.cart-cantidad{
+    font-size: 20px;
+    font-family: monospace;
+}
+.cart-total{
+    font-family: monospace;
+}
+.clear{
+    padding-bottom: 20px;
+}

@@ -10,9 +10,9 @@ const CartWidget = () => {
   return ( 
   <>
     <Link to='/cart'>
-        <div>
-          <FaCartArrowDown className='carrito' />
-          <span className='number'>{cantidadTotal() !== 0 && cantidadTotal()}</span>
+        <div className="cart-widget">
+          <div className='qty-display'>{cantidadTotal() !== 0 && cantidadTotal()}</div>
+          <FaCartArrowDown className='cart' />
         </div>
     </Link>
   </>
