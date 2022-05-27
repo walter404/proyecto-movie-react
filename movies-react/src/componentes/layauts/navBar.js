@@ -10,10 +10,8 @@ import CartWidget from "../CartWidget/CartWidget";
 
 import imagen from "./movi.jpg";
 
-
-
-
 const NavBar = () => {
+
     
     return(
 <>
@@ -29,14 +27,11 @@ const NavBar = () => {
                     </Nav>
                 </Navbar.Collapse>
                 
-                
-        </Container>      
         <CartWidget/>
+        </Container>  
     </Navbar>
     <section className="section">
-            <Outlet></Outlet>
-            
-                                                     
+            <Outlet></Outlet>                                                     
     </section>
         
 

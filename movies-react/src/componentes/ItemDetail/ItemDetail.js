@@ -17,9 +17,6 @@ const ItemDetail = ({producto}) => {
 
   console.log(cartList)
    
-  //   function handleInputType() {
-  //     
-  // }
 
     return (
       <div className="row" style={{marginLeft:0, marginRight:0}} >
@@ -29,12 +26,13 @@ const ItemDetail = ({producto}) => {
         </div>
 
         <div className="col">
-            <h1>{producto.name}</h1>
-              <h2>Categoria: {producto.categoria}</h2>
-                <h3>$ {producto.price}</h3>
+          <h1>{producto.name}</h1>
+          <h2>Categoria: {producto.categoria}</h2>
+          <h3>$ {producto.price}</h3>
                 
-                {inputType === 'itemCount' ?
-          <ItemCount producto={producto} initial={1} stock={5} onAdd={onAdd} />:
+          {inputType === 'itemCount' ?
+          <ItemCount producto={producto} initial={1} stock={5} onAdd={onAdd} />
+          :
           <Intercambiabilidad/>}
           
         </div>
