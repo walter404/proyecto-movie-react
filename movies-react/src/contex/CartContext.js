@@ -14,7 +14,7 @@ const CartContextProvider = ({children}) =>{
         const index = cartList.findIndex(product => product.id === item.id)
         if (index !== -1) {
             const cantidadVieja = cartList[index].cantidad
-            cartList[index].cantidad += cantidadVieja
+            cartList[index].cantidad = cantidadVieja + item.cantidad
             setCartList([...cartList])
         } else {
             setCartList( [

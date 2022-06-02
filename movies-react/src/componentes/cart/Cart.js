@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom'
 import Loading from '../componentes/Loading/Loading'
 import { useCartContext} from '../contex/CartContext'
 import Clear from '../componentes/clear/Clear'
@@ -6,6 +5,21 @@ import '../cart/Cart.css'
 
 
 const Cart = () => {
+
+  function ordenGenerada() {
+    let orden = {}
+      orden.buyer = { name:'walter', phone:'114566765', email:'walterverdun@gmail.com' }
+      orden.total = precioTotal()
+
+     orden.items = cartList.map(cartItem =>{
+       const id = cartItem.id
+       const nombre = cartItem.name
+       const precio = cartItem.price * cartItem.cantidad
+       return {id, nombre, precio}
+      })
+     console.log(orden)
+    }
+  
 
   const {cartList,vaciarCarrito, precioTotal, removeItem} = useCartContext()
 
@@ -25,7 +39,8 @@ const Cart = () => {
       }
     {cartList.length? 
     (
-    <div className='clear'><button className='btn btn-outline-secondary' onClick={vaciarCarrito}>Vaciar carrito</button></div>
+    <div className='clear'><button className='btn btn-outline-secondary' onClick={vaciarCarrito}>Vaciar carrito</button>
+    <button className='btn btn-outline-secondary' onClick={ordenGenerada}>Generar Orden</button></div>
     )
     : <Clear/>
     }
