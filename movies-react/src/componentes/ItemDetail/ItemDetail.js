@@ -1,5 +1,5 @@
 import {  useState } from 'react';
-import { useCartContext } from '../../contex/CartContext';
+import { useCartContext } from '../../context/CartContext';
 import Intercambiabilidad from '../Intercambiabilidad/Intercambiabilidad'
 import ItemCount from '../ItemCount/ItemCount'
 import '../ItemDetail/ItemDetail.css'

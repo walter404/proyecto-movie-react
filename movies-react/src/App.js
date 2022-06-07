@@ -9,14 +9,14 @@ import NavBarMovies from './componentes/layauts/NavBar';
 
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import Cart from './cart/Cart';
-import CartProvider from './contex/CartContext';
+import Cart from './componentes/cart/Cart';
+import CartProvider from './context/CartContext';
+//import Login from './componentes/login/Login';
 
 
 function App() {
     return (
         <div>
-            
             <BrowserRouter>
             <CartProvider>
             <Routes>

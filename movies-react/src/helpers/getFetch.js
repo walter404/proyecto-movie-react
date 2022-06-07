@@ -4,8 +4,10 @@ const productos = [
     { id: '3', categoria: 'nuevo', name: "Multiverso",   price: 4000, foto: '/assets/image/pelicula-3.jpg' },
     { id: '4', categoria: 'accion', name: "The Gladiador",   price: 6880, foto: '/assets/image/pelicula-4.jpg' },
     { id: '5', categoria: 'accion', name: "Soy Leyenda",   price: 3000, foto: '/assets/image/pelicula-5.jpg' },
-    { id: '6', categoria: 'nuevo', name: "Soy Leyenda 2",   price: 2000, foto: '/assets/image/pelicula-5.jpg' },
-       
+    { id: '6', categoria: 'nuevo', name: "Venom",   price: 2500, foto: '/assets/image/pelicula-6.jpg' },
+    { id: '7', categoria: 'nuevo', name: "Thor love and thunder",   price: 4500, foto: '/assets/image/pelicula-7.jpg' },
+    { id: '8', categoria: 'nuevo', name: "Metal gear",   price: 5800, foto: '/assets/image/pelicula-8.jpg' },
+    { id: '9', categoria: 'nuevo', name: "Mision de rescate",   price: 3500, foto: '/assets/image/pelicula-9.jpg' },
   ]
 
     
