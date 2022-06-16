@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 
-const Intercambiabilidad= ()=> {
+const Exchange= ()=> {
 
     
 
@@ -11,13 +11,11 @@ const Intercambiabilidad= ()=> {
         <Link to='/cart' >
             <button 
                 className="btn btn-outline-primary" 
-                onClick={()=>console.log('ir a cart') } 
             >Ir al Cart o Terminar compra</button>
         </Link>
         <Link to='/' >
             <button 
-                className="btn btn-outline-primary" 
-                onClick={()=>console.log('ir al home') } 
+                className="btn btn-outline-primary"  
             >Seguir comprando</button>
         </Link>
         </>
@@ -25,4 +23,4 @@ const Intercambiabilidad= ()=> {
 }
 
 
-export default Intercambiabilidad
+export default Exchange

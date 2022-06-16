@@ -16,7 +16,7 @@ export  function AlertDismissibleExample() {
                     Agrege un producto para poder ver en detalle lo agregado.
                     </p>
                 </Alert>
-                <Link to='/ItemListContainer'><button className='btn btn-outline-secondary' onClick={() => setShow(false)}>volver menu de compra</button></Link>
+                <Link to='/'><button className='btn btn-outline-secondary' onClick={() => setShow(false)}>volver menu de compra</button></Link>
             </div>
             
           );

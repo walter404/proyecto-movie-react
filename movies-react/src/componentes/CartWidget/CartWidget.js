@@ -5,13 +5,13 @@ import '../CartWidget/Cart.css'
 
 const CartWidget = () => {
 
-  const {cantidadTotal} = useCartContext()
+  const {quantityTotal} = useCartContext()
 
   return ( 
   <>
     <Link to='/cart'>
         <div className="cart-widget">
-          <div className='qty-display'>{cantidadTotal() !== 0 && cantidadTotal()}</div>
+          <div className='qty-display'>{quantityTotal() !== 0 && quantityTotal()}</div>
           <FaCartArrowDown className='cart' />
         </div>
     </Link>

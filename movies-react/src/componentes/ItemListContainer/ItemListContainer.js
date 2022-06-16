@@ -6,7 +6,7 @@ import ItemList from "../ItemList/ItemList.js"
 import Loading from "../Loading/Loading.js"
 
 
-const ItemListContainer = ( { saludo='Lo mas nuevo' } ) => {      
+const ItemListContainer = () => {      
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -27,7 +27,6 @@ const ItemListContainer = ( { saludo='Lo mas nuevo' } ) => {
 
     return (
         <div>
-            {saludo} 
             
             { loading ? 
                 <Loading/>

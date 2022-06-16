@@ -1,6 +1,6 @@
 import {  useState } from 'react';
 import { useCartContext } from '../../context/CartContext';
-import Intercambiabilidad from '../Intercambiabilidad/Intercambiabilidad'
+import Exchange from '../Exchange/Exchange' 
 import ItemCount from '../ItemCount/ItemCount'
 import '../ItemDetail/ItemDetail.css'
 
@@ -10,14 +10,10 @@ const ItemDetail = ({producto}) => {
   const {addToCart} = useCartContext()
 
   const onAdd = (cant) => {
-    console.log(cant)
     addToCart({...producto, cantidad: cant})
     setInputType('buyButtons');
   }
-
-  //console.log(cartList)
    
-
     return (
       <div className="row" style={{marginLeft:0, marginRight:0}} >
 
@@ -33,7 +29,7 @@ const ItemDetail = ({producto}) => {
           {inputType === 'itemCount' ?
           <ItemCount producto={producto} initial={1} stock={5} onAdd={onAdd} />
           :
-          <Intercambiabilidad/>}
+          <Exchange/>}
           
         </div>
 
