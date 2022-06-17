@@ -81,6 +81,7 @@ const Form = () => {
                   className='form-control'
                   type='text' 
                   name='name' 
+                  autoComplete="nope"
                   placeholder='Ingrese el nombre' 
                   value={dataForm.name}
                   onChange={handlerChange}
@@ -89,6 +90,7 @@ const Form = () => {
                   className='form-control'
                   type='text' 
                   name='phone'
+                  autoComplete="nope"
                   placeholder='Ingrese el telefono' 
                   value={dataForm.phone}
                   onChange={handlerChange}
@@ -97,6 +99,7 @@ const Form = () => {
                   className='form-control'
                   type='email' 
                   name='email'
+                  autoComplete="nope"
                   placeholder='Ingrese el email' 
                   value={dataForm.email}
                   onChange={handlerChange}
@@ -105,6 +108,7 @@ const Form = () => {
                   className='form-control'
                   type='email' 
                   name='email1'
+                  autoComplete="nope"
                   placeholder='repita email' 
                   value={dataForm.email}
                   onChange={handlerChange}
