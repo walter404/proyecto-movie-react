@@ -2,7 +2,7 @@
   "name": "movies-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://walter404.github.io/proyecto-movie-react/",
+  "homepage": "http://walter404.github.io/proyecto-movie-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
