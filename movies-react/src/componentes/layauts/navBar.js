@@ -8,7 +8,6 @@ import CartWidget from "../CartWidget/CartWidget";
 
 
 import imagen from "./movi.jpg";
-
 const NavBar = () => {
 
     
