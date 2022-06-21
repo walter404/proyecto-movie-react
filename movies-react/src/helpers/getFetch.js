@@ -1,5 +1,5 @@
 const productos = [
-    { id: '1', categoria: 'accion', name: "Proyecto Rampage",   price: 2300, foto: '/assets/image/pelicula-2.jpg' },
+    { id: '1', categoria: 'accion', name: "Proyecto Rampage",   price: 2300, foto: '/assets/image/pelicula-1.jpg' },
     { id: '2', categoria: 'nuevo', name: "Batman",  price: 2700, foto: '/assets/image/pelicula-2.jpg' },
     { id: '3', categoria: 'nuevo', name: "Multiverso",   price: 4000, foto: '/assets/image/pelicula-3.jpg' },
     { id: '4', categoria: 'accion', name: "The Gladiador",   price: 6880, foto: '/assets/image/pelicula-4.jpg' },
