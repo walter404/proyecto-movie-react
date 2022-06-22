@@ -29,6 +29,7 @@ function App() {
                 <Route path="/cart" element={<Cart/>}/>
                 <Route path='*'  element={<Page404/>} />
                 </Route>
+                
             </Routes>
             </CartProvider>
             </BrowserRouter>
