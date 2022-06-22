@@ -4,7 +4,8 @@ Este es un proyecto orientados en compra y rentas de peliculas, me parecio muy i
 
     Link del Proyecto
 
-    https://walter404.github.io/proyecto-movie-react/
+
+    link : https://walter404.github.io/proyecto-movie-react/
 
   Construido con 🛠️
    👇
