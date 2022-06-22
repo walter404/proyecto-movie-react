@@ -2,10 +2,10 @@
 
 Este es un proyecto orientados en compra y rentas de peliculas, me parecio muy interense la idea ya que en la actualidad nos entretenemos mirando nuestra mejor series y peliculas. Bueno sobre como lo trabaje fue utilizar react-router-dom para simplificar la navegacion de la pagina, tambien utilice hooks para simplificar la navegacion de la misma. Mi idea es que sea intuitiva, que no sea compleja a la hora de navegar en ella y que sea entretenida.
 
-    Link del Proyecto
+    
 
 
-    link : https://walter404.github.io/proyecto-movie-react/
+    
 
   Construido con 🛠️
    👇
@@ -20,6 +20,9 @@ Este es un proyecto orientados en compra y rentas de peliculas, me parecio muy i
 
    * CSS3 // Con la utilizacion del mismo se estilizo la web
    
+   Enlace al sitio
+
+     https://walter404.github.io/proyecto-movie-react/
 
    Muchas gracias por ver mi proyecto
     gracias a todos🤓.
