@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
-import '../Form/Form.css'
+import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'
 import swal from 'sweetalert';
 import {useCartContext} from '../../context/CartContext'
-import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'
-
+import '../Form/Form.css'
 
 const Form = () => {
     const [dataForm, setDataForm] = useState({email:'', phone:'', name:''})
     const {cartList,clearCarrito, overallPrice} = useCartContext()
 
-    const alert = ()=>{
-        swal("Gracias por su compra","Esperamos su compra pronto", "success")
-    }
+    // const alert = (resp)=>{
+        
+    // }
 
     async function generateOrder(e) {
         e.preventDefault()
@@ -34,7 +33,7 @@ const Form = () => {
         const db = getFirestore()
         const queryCollection = collection(db, 'orders')
         addDoc(queryCollection, orden)
-        .then(resp => console.log(resp))
+        .then(resp => swal("Gracias por su compra","codigo de compra :"+ resp.id , "success"))
         .catch(err => console.log(err))
         .finally(()=> clearCarrito() ) 
     
@@ -54,7 +53,7 @@ const Form = () => {
         .then(resp => resp.docs.forEach(res => batch.update(res.ref, {
               stock: res.data().stock - cartList.find(item => item.id === res.id).cantidad
         }) ))
-        .finally(()=> alert() )
+        .finally(()=> swal("LISTO"))
 
         batch.commit()
     

@@ -1,18 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, } from 'react-router-dom';
-import './App.css';
-
-
-
 import NavBarMovies from './componentes/layauts/NavBar';
-
-
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import Cart from './componentes/cart/Cart';
 import CartProvider from './context/CartContext';
 import Page404 from './componentes/Err/Page404';
-
+import './App.css';
 
 
 function App() {
@@ -21,8 +15,8 @@ function App() {
             <BrowserRouter>
             <CartProvider>
             <Routes>
-                <Route path='/' element={ <NavBarMovies /> }>
-                
+                <Route path='/' element={ <NavBarMovies /> } >  
+
                 <Route path="/" element = { <ItemListContainer /> } />
                 <Route path="/categoria/:id" element={<ItemListContainer/>} />
                 <Route path="/detalle/:detalleId" element = { <ItemDetailContainer /> } />
@@ -33,8 +27,6 @@ function App() {
             </Routes>
             </CartProvider>
             </BrowserRouter>
-            
-           
                           
         </div>
         
