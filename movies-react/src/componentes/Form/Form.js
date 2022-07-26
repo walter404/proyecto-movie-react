@@ -8,14 +8,10 @@ const Form = () => {
     const [dataForm, setDataForm] = useState({email:'', phone:'', name:''})
     const {cartList,clearCarrito, overallPrice} = useCartContext()
 
-    // const alert = (resp)=>{
-        
-    // }
 
     async function generateOrder(e) {
         e.preventDefault()
         let orden = {}     
-        
         orden.buyer = dataForm
         orden.total = overallPrice()
     
@@ -27,7 +23,7 @@ const Form = () => {
             
             
             return {id, name, price, quantity}   
-        })   
+        }) 
         
         // crear
         const db = getFirestore()
@@ -36,9 +32,7 @@ const Form = () => {
         .then(resp => swal("Gracias por su compra","codigo de compra :"+ resp.id , "success"))
         .catch(err => console.log(err))
         .finally(()=> clearCarrito() ) 
-    
-    
-    
+     
         // actualizar el stock
         const queryCollectionStock = collection(db, 'productos')
     
@@ -54,9 +48,10 @@ const Form = () => {
               stock: res.data().stock - cartList.find(item => item.id === res.id).cantidad
         }) ))
         .finally(()=> swal("LISTO"))
+    
 
         batch.commit()
-    
+      
     
     }   
 
@@ -65,6 +60,7 @@ const Form = () => {
             ...dataForm,
             [e.target.name]: e.target.value
         })
+    
     }
 
   return (
